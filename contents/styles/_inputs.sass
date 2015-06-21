@@ -1,16 +1,54 @@
-select
+select,
+input
   -webkit-appearance: none
-  width: 600px
-  font-size: 2em
-  font-family: 'Raleway', sans-serif
+  width: 900px
+  font-size: 3em
+  font-family: 'Roboto', sans-serif
   background: none
   border: none
   box-shadow: none
   border-radius: 0
-  border-bottom: 1px solid $dk-grey
+  border-bottom: 1px solid $pink
+  color: $pink
   padding-bottom: 5px
+  position: relative
+  +transition(all 300ms)
+  @extend .text-light
+
+  &:focus,
+  &:hover
+    outline: none
+    border-color: $orange
+    color: $orange
+
+::-webkit-input-placeholder
+  color: $pink
   +transition(all 300ms)
 
-  &:focus
-    outline: none
-    border-color: pink
+  &:hover
+    color: $pink
+
+.ui-helper-hidden-accessible
+  display: none
+
+.ui-autocomplete
+  list-style-type: none
+  padding: 0
+  margin: 0
+  width: 900px
+  font-size: 3em
+  max-height: 270px
+  overflow-y: scroll
+  border-bottom: 1px solid rgba($lt-grey, 0.2)
+  @extend .text-light
+
+  li
+    padding: 20px 0
+    border-bottom: 1px solid rgba($lt-grey, 0.2)
+    +transition(all 300ms)
+
+    &:last-of-type
+      border-bottom: none
+
+    &:hover
+      color: $orange

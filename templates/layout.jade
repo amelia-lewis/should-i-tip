@@ -14,7 +14,8 @@ html(lang='en')
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href='/styles/style.css?v1.0')
       link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
-      link(href='http://fonts.googleapis.com/css?family=Raleway:400,700', rel='stylesheet', type='text/css')
+      link(href='http://fonts.googleapis.com/css?family=Roboto:500,100', rel='stylesheet', type='text/css')
+      link(rel="shortcut icon", type="image/x-icon", href="/favicon.ico")
   
   body(class=bodyclass)
     //- header
@@ -33,6 +34,8 @@ html(lang='en')
         block footer
           section.copy
             p &copy; #{ new Date().getFullYear() } 
-              a(href="") Robert Anderson
+              a(href="http://noisysocks.com/", target="_blank") Robert Anderson
               |  &amp; 
-              a(href="") Amelia Lewis
+              a(href="http://amelia-lewis.com", target="_blank") Amelia Lewis
+
+    include partials/scripts

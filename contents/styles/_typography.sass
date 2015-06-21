@@ -13,11 +13,11 @@
 
 
 // WEIGHT
-.text-normal
-  font-weight: 400
+.text-light
+  font-weight: 100
 
 .text-bold
-  font-weight: 700
+  font-weight: 500
 
 
 // TRANSFORMATION
@@ -33,21 +33,46 @@
 
 
 // MARGINS
-h1, h2, h3, h4, ul, ol, p, li
+h1, h2, h3, h4, p
   margin: 0 0 0.5em
 
 
 // SIZES
 h1
-  font-size: 3.5em
+  font-size: 6em
+  @extend .text-light
+  background: $purple
+  background: -moz-linear-gradient(-45deg,  $purple 0%, $pink 50%, $orange 100%)
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$purple), color-stop(50%,$pink), color-stop(100%,$orange))
+  background: -webkit-linear-gradient(-45deg,  $purple 0%,$pink 50%,$orange 100%)
+  background: -o-linear-gradient(-45deg,  $purple 0%,$pink 50%,$orange 100%)
+  background: -ms-linear-gradient(-45deg,  $purple 0%,$pink 50%,$orange 100%)
+  background: linear-gradient(135deg,  $purple 0%,$pink 50%,$orange 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$purple', endColorstr='$orange',GradientType=1 )
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
 
 
 // STYLES
 a
   text-decoration: none
   color: inherit
+  position: relative
   +transition(all 300ms)
 
+  &:after
+    content: ""
+    width: 100%
+    height: 1px
+    background: $purple
+    display: block
+    position: absolute
+    bottom: -10px
+    left: 0
+    opacity: 0
+    +transition(all 300ms)
+
   &:hover
-    background: $lt-grey
-    color: white
+    &:after
+      opacity: 1
+      bottom: -3px
