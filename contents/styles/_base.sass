@@ -1,0 +1,38 @@
+html
+  width: 100%
+  height: 100%
+
+body
+  background: white
+  margin: 0
+  padding: 0
+  font-family: 'Raleway', sans-serif
+  position: relative
+  width: 100%
+  height: 100%
+  color: $dk-grey
+
+
+// ====================
+// COMMON STYLES
+// ====================
+
+.display-box
+  display: -ms-box
+  -ms-box-pack: center
+  -ms-box-align: center
+
+  display: -moz-box
+  -moz-box-pack: center
+  -moz-box-align: center
+
+  display: -webkit-box
+  -webkit-box-pack: center
+  -webkit-box-align: center
+
+.clearfix
+  clear: both
+
+@for $i from 1 through 30
+  .delay-#{$i * 50}
+    transition-delay: $i * 50ms !important
