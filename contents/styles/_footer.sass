@@ -14,3 +14,21 @@ footer
     background: white
     display: inline-block
     padding: 0 15px
+
+  a
+    &:after
+      content: ""
+      width: 100%
+      height: 1px
+      background: $purple
+      display: block
+      position: absolute
+      bottom: -10px
+      left: 0
+      opacity: 0
+      +transition(all 300ms)
+
+    &:hover
+      &:after
+        opacity: 1
+        bottom: -3px

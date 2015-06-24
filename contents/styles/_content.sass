@@ -2,5 +2,33 @@
   position: absolute
   top: 47%
   left: 50%
+  width: 85%
   +transform(translate3d(-50%, -50%, 0))
   @extend .text-center
+
+  .row
+    .col
+      min-width: 200px
+      padding: 30px
+      // border: 1px solid $pink
+      display: inline-block
+      margin: 0 10px
+      position: relative
+
+      &:after
+        content: ""
+        height: 100%
+        width: 1px
+        background: $orange
+        display: block
+        position: absolute
+        top: 0
+        right: -10px
+        +transform(rotate(10deg))
+        +transform-origin(center center)
+
+      &:last-of-type:after
+        display: none
+
+  .content.no
+    display: none

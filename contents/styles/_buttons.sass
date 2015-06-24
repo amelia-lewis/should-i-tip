@@ -1,0 +1,21 @@
+.btn
+  display: inline-block
+  width: 80px
+  height: 80px
+  margin: 70px auto 0
+  border: 1px solid $pink
+  color: $pink
+  @extend .display-box
+  +border-radius(50%)
+  font-size: 1.5em
+  +transition(all 400ms)
+
+  &:hover
+    border-color: $orange
+    color: $orange
+    +transform(rotate(-10deg) scale(1.05))
+
+  &:active
+    border-color: $orange
+    color: $orange
+    +transform(rotate(-10deg) scale(0.98))

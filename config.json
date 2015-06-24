@@ -1,7 +1,7 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "Should I Tip In?",
+    "name": "Should I Tip?",
     "owner": "Robert Anderson & Amelia Lewis",
     "description": "Ramblings of an immor(t)al demigod"
   },
